@@ -7,7 +7,7 @@ print("API KEY:", GOOGLE_API_KEY[:10] if GOOGLE_API_KEY else "None")
 
 genai.configure(api_key=GOOGLE_API_KEY)
 
-model = genai.GenerativeModel("gemini-2.5-flash")
+model = genai.GenerativeModel("gemini-2.5-flash-lite")
 
 def ask_gemini(prompt):
 
