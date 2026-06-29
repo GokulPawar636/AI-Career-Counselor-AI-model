@@ -3,14 +3,8 @@ from config.config import GOOGLE_API_KEY
 
 genai.configure(api_key=GOOGLE_API_KEY)
 
-model = genai.GenerativeModel(
-    "gemini-2.5-flash-lite"
-)
+model = genai.GenerativeModel("gemini-2.5-flash-lite")
 
 def ask_gemini(prompt):
-
-    response = model.generate_content(
-        prompt
-    )
-
+    response = model.generate_content(prompt)
     return response.text
