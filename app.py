@@ -1,4 +1,6 @@
 ﻿import streamlit as st
+from database.init_db import *
+import database.init_db
 from agents.assessment_agent import generate_career_plan
 from agents.counselor_agent import answer_career_question
 from services.database_service import get_user_career_profiles, save_career_profile
