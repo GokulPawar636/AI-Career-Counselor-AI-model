@@ -1,5 +1,6 @@
 ﻿import streamlit as st
 from database.init_db import *
+init_database()
 import database.init_db
 from agents.assessment_agent import generate_career_plan
 from agents.counselor_agent import answer_career_question
@@ -8,7 +9,10 @@ from services.auth_service import login_user, register_user
 from services.report_visualization import render_report_dashboard
 from services.resume_service import extract_pdf_text
 from services.pdf_service import generate_report_pdf
+from database.db import engine
+from database.models import Base
 
+Base.metadata.create_all(bind=engine)
 
 # ==========================================================
 # Page Configuration
