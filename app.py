@@ -1,7 +1,5 @@
 ﻿import streamlit as st
 from database.init_db import *
-from database.init_db import init_database
-init_database()
 import database.init_db
 from agents.assessment_agent import generate_career_plan
 from agents.counselor_agent import answer_career_question
